@@ -143,7 +143,7 @@ header.scroll {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   cursor: pointer;
-  z-index: 300;
+  z-index: 100;
 }
 
 .btn-primary {
@@ -279,7 +279,7 @@ span {
   border-radius: 0 0 2.5rem 2.5rem;
   padding: 8rem 0;
   position: relative;
-  height: 47rem;
+  height: 43rem;
 }
 
 /* about */
@@ -387,14 +387,35 @@ span {
 }
 
 .pen {
-  top: -6rem;
+  top: -7rem;
   right: -2rem;
+  transform: scale(1.5);
+  animation: inAir 1.5s alternate infinite;
+}
+
+@keyframes inAir {
+  from {
+    top: -6.5rem;
+  }
+  to {
+    top: -7rem;
+  }
+}
+
+@keyframes inAirRocket {
+  from {
+    top: 45%;
+  }
+  to {
+    top: 46%;
+  }
 }
 
 .rocket {
   top: 45%;
   left: 2%;
   transform: rotate(45deg);
+  animation: inAirRocket 1.5s alternate infinite;
 }
 
 .btn-button {
@@ -526,6 +547,52 @@ span {
 
 .card-btn:hover {
   border: 1px solid var(--font-colorBlack);
+}
+
+/* Testimunials */
+.container-wrap {
+  display: flex;
+  gap: 5rem;
+}
+
+.testimunials-container {
+  /* width: 15rem; */
+  height: auto;
+  display: flex;
+  gap: 2rem;
+
+  /* overflow-x: auto; */
+}
+
+.testimunials {
+  width: 18rem;
+  height: 10rem;
+  background-color: rgb(209, 144, 5);
+  display: flex;
+  margin: 1.5rem;
+  border-radius: 1.5rem 1.5rem 1.5rem 0;
+
+  position: relative;
+}
+
+.testimunials blockquote {
+  margin-left: 1rem;
+  color: var(--font-colorBlack);
+  font-weight: 700;
+  text-align: start;
+}
+
+.testimunials blockquote cite {
+  font-size: 1.2rem;
+}
+
+.testimunials img {
+  width: 10rem;
+
+  position: absolute;
+  bottom: 0;
+  left: -2rem;
+  z-index: 100;
 }
 
 @media (min-width: 1400) {
