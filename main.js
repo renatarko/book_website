@@ -45,4 +45,22 @@ function changeHeaderWhenScroll() {
   }
 }
 
+// swiper Testimonials
+const swiper = new Swiper(".swiper-container", {
+  // Optional parameters
+  slidesPerView: 0.85,
+  loop: true,
+  mousewheel: true,
+  keyboard: true,
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+  },
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
 window.addEventListener("scroll", changeHeaderWhenScroll);

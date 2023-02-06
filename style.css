@@ -550,49 +550,132 @@ span {
 }
 
 /* Testimunials */
+#testimonials {
+  background-color: var(--font-colorWhite);
+  padding-bottom: 12rem;
+}
+
+.testimonials-circle {
+  width: 15rem;
+  height: 15rem;
+  background-color: var(--bg-blue);
+  top: 2.5rem;
+  left: -4rem;
+
+  z-index: 1;
+  /* position: relative; */
+}
+
+.testimonials-circle::before {
+  content: "";
+  background-color: var(--bg-blue);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 18rem;
+  left: 40%;
+  animation: circle-small 2s ease-in-out forwards;
+}
+
+@keyframes circle-small {
+  0% {
+    top: 0;
+    left: 50%;
+  }
+  100% {
+    top: 18rem;
+    left: 40%;
+  }
+}
+
+.testimonials-circle::after {
+  content: "";
+  background-color: var(--bg-blue);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 15rem;
+  animation: circle 1.5s ease-in-out forwards;
+}
+
+@keyframes circle {
+  0% {
+    top: 0;
+    left: 50%;
+  }
+  100% {
+    top: 15rem;
+    left: 0;
+  }
+}
+
+.text {
+  width: 50%;
+}
+
 .container-wrap {
+  padding-top: 8rem;
+
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 5rem;
 }
 
-.testimunials-container {
-  /* width: 15rem; */
-  height: auto;
-  display: flex;
-  gap: 2rem;
-
-  /* overflow-x: auto; */
+.swiper {
+  width: 15rem;
+  background-color: #f8b9c2;
+  border-radius: 12px 12px 12px 0;
+  z-index: 100;
 }
 
-.testimunials {
-  width: 18rem;
-  height: 10rem;
-  background-color: rgb(209, 144, 5);
-  display: flex;
-  margin: 1.5rem;
-  border-radius: 1.5rem 1.5rem 1.5rem 0;
-
+.swiper-container {
+  margin: 2rem;
   position: relative;
 }
 
-.testimunials blockquote {
-  margin-left: 1rem;
-  color: var(--font-colorBlack);
-  font-weight: 700;
-  text-align: start;
-}
-
-.testimunials blockquote cite {
-  font-size: 1.2rem;
-}
-
-.testimunials img {
-  width: 10rem;
-
+.img-testimonials {
+  width: 12rem;
   position: absolute;
   bottom: 0;
-  left: -2rem;
+  left: -2.5rem;
   z-index: 100;
+}
+
+.swiper-wrapper {
+  width: auto;
+}
+
+.swiper-slide {
+  width: auto;
+  height: auto;
+  padding: 0 0.5rem;
+}
+
+.swiper-slide div {
+  width: 10rem;
+  height: auto;
+  border-radius: 5px 8px;
+  padding: 10px;
+  background-color: var(--font-colorWhite);
+  color: var(--font-colorBlack);
+  text-align: center;
+}
+
+.swiper-slide div cite {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.swiper-pagination {
+  bottom: 0;
+  z-index: -1;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--font-colorWhite);
 }
 
 @media (min-width: 1400) {
