@@ -150,7 +150,6 @@ header.scroll {
 .book {
   top: 12%;
   left: 10%;
-  z-index: 1;
 }
 
 .button {
@@ -785,23 +784,15 @@ span {
   }
 
   /* Menu Mobile */
-  main {
-    position: relative;
-  }
 
   .menu-navigation {
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .menu-mobile {
     cursor: pointer;
     display: block;
     border: none;
-    border-radius: 100%;
-    width: 3rem;
-    height: 3rem;
-    position: absolute;
-    top: 37rem;
     right: 1.9rem;
     z-index: 300;
 
@@ -829,8 +820,8 @@ span {
     z-index: 100;
     transition: all 0.4s;
 
-    opacity: 0;
-    visibility: hidden;
+    opacity: 1;
+    visibility: visible;
   }
 
   .menu-navigation.active .menu {
@@ -840,11 +831,10 @@ span {
   }
 
   .menu-navigation.active .menu-mobile {
-    top: 40rem;
     transform: rotate(90deg);
   }
 
-  .menu .menu-link {
+  .menu-link {
     display: none;
   }
 
@@ -852,6 +842,10 @@ span {
     display: block;
     color: var(--bg-blue);
     font-size: 1.9rem;
+  }
+
+  .menu-navigation .menu li {
+    margin-left: 0;
   }
 
   .menu-link-icon:active {
