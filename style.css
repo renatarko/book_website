@@ -258,7 +258,7 @@ span {
   font-size: 3rem;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 1rem;
-  line-height: 3rem;
+  line-height: 3.2rem;
 
   z-index: 200;
 }
@@ -796,7 +796,7 @@ span {
     right: 1.9rem;
     z-index: 300;
 
-    background-color: var(--bg-blue);
+    background: none;
     font-size: 2rem;
     color: var(--font-colorWhite);
     transition: 0.4s;
@@ -929,7 +929,7 @@ span {
   }
 
   .chapeu {
-    right: 0;
+    right: 2rem;
   }
 
   .divider {
