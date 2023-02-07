@@ -749,11 +749,53 @@ span {
   right: -0.3rem;
 }
 
-.women-book {
+.insidebook-circle {
   width: 15rem;
+  height: 15rem;
   background-color: var(--bg-blue);
-  clip-path: circle();
+  position: relative;
 }
+
+.insidebook-circle::after,
+.insidebook-circle::before {
+  position: absolute;
+  content: "";
+  width: 1.7rem;
+  height: 0.2rem;
+  border-radius: 20px;
+  background-color: var(--bg-blue);
+  top: 0;
+  right: 0;
+  rotate: 130deg;
+}
+
+.insidebook-circle::before {
+  top: 0.8rem;
+  right: -0.8rem;
+  rotate: 150deg;
+}
+
+.women-book,
+.inside-phone {
+  width: 10rem;
+  position: absolute;
+}
+
+.women-book {
+  width: 17rem;
+  top: 1rem;
+  z-index: 2;
+}
+
+.inside-phone {
+  width: 20rem;
+  top: -3rem;
+  right: -2rem;
+  transform: rotate(10deg);
+  z-index: 1;
+}
+
+/* Media Queries */
 
 @media (min-width: 1400) {
   .container {
