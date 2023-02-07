@@ -65,6 +65,7 @@ const swiper = new Swiper(".swiper-container", {
 
 window.addEventListener("scroll", changeHeaderWhenScroll);
 
+// menu mobile
 const btnMobile = document.querySelector(".menu-mobile");
 
 function toggleMenu() {
@@ -82,3 +83,17 @@ function toggleMenu() {
 }
 
 btnMobile.addEventListener("click", toggleMenu);
+
+// ScrollReveal
+const scrollReveal = ScrollReveal({
+  origin: "top",
+  distance: "30px",
+  duration: 700,
+  reset: true,
+});
+
+console.log(scrollReveal);
+
+scrollReveal.reveal(
+  ".containerText, .container-btn, .text-container, .box-container, .text, .grid"
+);
