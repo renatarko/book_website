@@ -92,8 +92,6 @@ const scrollReveal = ScrollReveal({
   reset: true,
 });
 
-console.log(scrollReveal);
-
 scrollReveal.reveal(
   ".containerText, .container-btn, .text-container, .box-container, .text, .grid"
 );

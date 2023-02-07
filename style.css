@@ -13,7 +13,9 @@ a {
 }
 
 body {
+  background-color: var(--bg-blue);
   font-family: "Open Sans", sans-serif;
+  position: relative;
 }
 
 :root {
@@ -114,21 +116,20 @@ header.scroll {
   border-radius: 50%;
   background-color: rgba(131, 143, 250, 0.171);
   position: absolute;
-  z-index: 1;
+  z-index: -1;
 }
 
 .big {
   width: 25rem;
   height: 25rem;
-  top: -35%;
-  right: 0;
-  z-index: 200;
+  top: -10rem;
+  right: 15%;
 }
 
 .small {
   width: 8rem;
   height: 8rem;
-  top: 20%;
+  top: 8%;
   left: 30%;
 }
 
@@ -137,17 +138,19 @@ header.scroll {
   background-color: rgba(131, 143, 250, 0.171);
   border-radius: 50%;
   position: absolute;
+  z-index: -1;
 }
 
 .chapeu {
-  top: 40%;
-  right: 10%;
+  top: 10%;
+  right: 5%;
   transform: rotate(-40deg);
 }
 
 .book {
-  top: 50%;
+  top: 12%;
   left: 10%;
+  z-index: 1;
 }
 
 .button {
@@ -212,6 +215,7 @@ span {
 .container {
   margin-left: 8rem;
   margin-right: 8rem;
+  position: relative;
 }
 
 .before-container {
@@ -235,6 +239,7 @@ span {
   align-items: center;
 
   text-align: center;
+  z-index: 200;
 }
 
 .text-container {
@@ -246,6 +251,7 @@ span {
   align-items: flex-end;
 
   gap: 3rem;
+  z-index: 200;
 }
 
 .title {
@@ -255,7 +261,7 @@ span {
   margin-bottom: 1rem;
   line-height: 3rem;
 
-  z-index: 100;
+  z-index: 200;
 }
 
 .sub-title {
@@ -263,7 +269,7 @@ span {
   color: var(--font-colorBlack);
   font-size: 2rem;
 
-  z-index: 100;
+  z-index: 200;
 }
 
 .sub-description {
@@ -291,11 +297,11 @@ span {
 
 /* home */
 #home {
-  background-color: var(--bg-blue);
   border-radius: 0 0 2.5rem 2.5rem;
   padding: 8rem 0;
-  position: relative;
+  /* position: relative; */
   height: 43rem;
+  z-index: 200;
 }
 
 /* about */
@@ -465,6 +471,7 @@ span {
 }
 
 .card-container {
+  width: 44.5rem;
   background-color: #ffff;
   display: flex;
   flex-flow: row nowrap;
@@ -695,6 +702,7 @@ span {
 
 /* Insidebook */
 #insideBook {
+  background-color: var(--font-colorWhite);
   padding-bottom: 7rem;
 }
 
@@ -833,7 +841,7 @@ span {
   }
 
   .menu-navigation.active .menu {
-    top: 37rem;
+    top: 37.3rem;
     opacity: 1;
     visibility: visible;
   }
