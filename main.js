@@ -25,10 +25,12 @@ buttonControl.forEach((control) =>
     cards.forEach((card) => card.classList.remove("current"));
 
     cards[current].scrollIntoView({
-      behavior: "smooth",
+      block: "nearest",
       inline: "center",
+      behavior: "smooth",
     });
 
+    console.log(cards[current], control);
     cards[current].classList.add("current");
   })
 );
