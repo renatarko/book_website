@@ -64,3 +64,21 @@ const swiper = new Swiper(".swiper-container", {
 });
 
 window.addEventListener("scroll", changeHeaderWhenScroll);
+
+const btnMobile = document.querySelector(".menu-mobile");
+
+function toggleMenu() {
+  const nav = document.querySelector(".menu-navigation");
+  nav.classList.toggle("active");
+
+  const links = document.querySelectorAll("nav ul li a");
+  console.log(links);
+
+  for (const link of links) {
+    link.addEventListener("click", function () {
+      nav.classList.remove("active");
+    });
+  }
+}
+
+btnMobile.addEventListener("click", toggleMenu);
