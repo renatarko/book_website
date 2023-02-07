@@ -801,7 +801,7 @@ span {
     width: 3rem;
     height: 3rem;
     position: absolute;
-    top: 45.5rem;
+    top: 37rem;
     right: 1.9rem;
     z-index: 300;
 
@@ -840,7 +840,7 @@ span {
   }
 
   .menu-navigation.active .menu-mobile {
-    top: 43.5rem;
+    top: 40rem;
     transform: rotate(90deg);
   }
 
