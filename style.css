@@ -902,11 +902,6 @@ footer {
   border-top: 1px solid #1a181b5d;
 }
 
-.information-gap {
-  display: flex;
-  gap: 1rem;
-}
-
 /* Media Queries */
 
 @media (min-width: 1400) {
