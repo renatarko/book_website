@@ -1014,9 +1014,12 @@ footer {
 
   /* footer */
   #container-footer h3 {
+    width: 100%;
+    padding: 0.5rem 0;
     position: absolute;
     top: -4.5rem;
     left: 0;
+    border-bottom: 1px solid #1a181b46;
   }
 
   #container-footer {
