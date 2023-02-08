@@ -904,17 +904,17 @@ footer {
 
 /* Media Queries */
 
-@media (min-width: 1400) {
+@media (min-width: 1300px) {
   .container {
-    margin-left: 12rem;
-    margin-right: 12rem;
+    margin-left: 14rem;
+    margin-right: 14rem;
   }
 }
 
 @media (max-width: 800px) {
   .container {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
   }
 
   .container-wrap {
