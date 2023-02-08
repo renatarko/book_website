@@ -39,11 +39,19 @@ buttonControl.forEach((control) =>
 const header = document.querySelector("header");
 const navHeight = header.offsetHeight;
 
-function changeHeaderWhenScroll() {
+const circle = document.querySelector(".testimonials-circle");
+
+function changeElementsWhenScroll() {
   if (window.scrollY >= navHeight) {
     header.classList.add("scroll");
   } else {
     header.classList.remove("scroll");
+  }
+
+  if (window.scrollY >= 1700) {
+    circle.classList.add("animation");
+  } else {
+    circle.classList.remove("animation");
   }
 }
 
@@ -65,7 +73,7 @@ const swiper = new Swiper(".swiper-container", {
   },
 });
 
-window.addEventListener("scroll", changeHeaderWhenScroll);
+window.addEventListener("scroll", changeElementsWhenScroll);
 
 // menu mobile
 const btnMobile = document.querySelector(".menu-mobile");
